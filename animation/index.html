@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <link rel="icon" href="images/capybara/img_01.jpg" type="image/jpg">
+
+
+    <!-- Main stylesheet (includes base, rotation, and drag-drop styles) -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- JavaScript file for drag-and-drop functionality -->
+    <script src="js/drag-and-drop.js" defer></script>
+
+    <!-- Section: Drag and Drop -->
+    <section class="animation-drag-drop">
+        <h1>Drag and Drop</h1>
+
+        <!-- Drop zone for images -->
+        <div class="drop-zone">
+            <!-- Reset button to move all dropped images back to the original list -->
+            <button title="Reset images" class="reset-btn">🔄</button>
+        </div>
+
+        <!-- Original image list (draggable items) -->
+        <div class="list-images">
+            <img class="item" draggable="true" style="--position: 1" src="images/capybara/img_01.jpg">
+            <img class="item" draggable="true" style="--position: 2" src="images/capybara/img_02.jpg">
+            <img class="item" draggable="true" style="--position: 3" src="images/capybara/img_03.avif">
+            <img class="item" draggable="true" style="--position: 4" src="images/capybara/img_04.jpeg">
+            <img class="item" draggable="true" style="--position: 5" src="images/capybara/img_05.png">
+            <img class="item" draggable="true" style="--position: 6" src="images/capybara/img_06.webp">
+            <img class="item" draggable="true" style="--position: 7" src="images/capybara/img_07.avif">
+            <img class="item" draggable="true" style="--position: 8" src="images/capybara/img_08.jpeg">
+        </div>
+    </section>
+
+    <!-- Section: 3D Rotating Carousel -->
+    <section class="animation-rotation">
+       <!--  <h1>Capybara</h1> -->
+
+        <!-- 3D scene container with perspective -->
+        <div class="scene">
+            <!-- Wrapper that rotates images in 3D -->
+            <div class="rotating-wrapper">
+                <img class="rotating-wrapper--item" style="--position: 1" src="images/capybara/img_01.jpg">
+                <img class="rotating-wrapper--item" style="--position: 2" src="images/capybara/img_02.jpg">
+                <img class="rotating-wrapper--item" style="--position: 3" src="images/capybara/img_03.avif">
+                <img class="rotating-wrapper--item" style="--position: 4" src="images/capybara/img_04.jpeg">
+                <img class="rotating-wrapper--item" style="--position: 5" src="images/capybara/img_05.png">
+                <img class="rotating-wrapper--item" style="--position: 6" src="images/capybara/img_06.webp">
+                <img class="rotating-wrapper--item" style="--position: 7" src="images/capybara/img_07.avif">
+                <img class="rotating-wrapper--item" style="--position: 8" src="images/capybara/img_08.jpeg">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

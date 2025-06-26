@@ -1,0 +1,67 @@
+.animation-drag-drop .drop-zone {
+    position: relative;
+    max-height: 400px;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff7eb;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.animation-drag-drop .drop-zone.hoverOver {
+    background-color: #ffe9c4;
+    border-color: #ff9900;
+}
+
+.animation-drag-drop .reset-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    padding: 4px;
+    background-color: #fff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.animation-drag-drop .reset-btn:hover {
+    background-color: #ffe9c4;
+    border-color: #ff9900;
+}
+
+.animation-drag-drop .drop-zone img {
+    max-width: 100px;
+    border-radius: 12px;
+    background-size: cover;
+}
+
+.animation-drag-drop .item.dragging {
+    opacity: 0.5;
+    scale: 0.95;
+}
+
+.animation-drag-drop .list-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.animation-drag-drop .list-images img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    object-fit: cover;
+}
