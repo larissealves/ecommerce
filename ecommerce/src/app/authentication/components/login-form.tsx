@@ -24,7 +24,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-//import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 
 const formSchema = z.object({
   email: z.email("E-mail inválido!"),
@@ -44,7 +44,7 @@ const SignInForm = () => {
   });
 
   async function onSubmit(values: FormValues) {
-    {/* await authClient.signIn.email({
+    await authClient.signIn.email({
       email: values.email,
       password: values.password,
       fetchOptions: {
@@ -70,13 +70,13 @@ const SignInForm = () => {
           toast.error(ctx.error.message);
         },
       },
-    }); */}
+    });
   }
 
   const handleSignInWithGoogle = async () => {
-   {/* await authClient.signIn.social({
+    await authClient.signIn.social({
       provider: "google",
-    }); */}
+    });
   };
   return (
     <>

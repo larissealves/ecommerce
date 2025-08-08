@@ -24,7 +24,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-//import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 
 const formSchema = z
   .object({
@@ -57,7 +57,7 @@ const SignUpForm = () => {
     },
   });
 
- {/*  async function onSubmit(values: FormValues) {
+  async function onSubmit(values: FormValues) {
     await authClient.signUp.email({
       name: values.name,
       email: values.email,
@@ -74,10 +74,10 @@ const SignUpForm = () => {
             });
           }
           toast.error(error.error.message);
-        }, 
+        },
       },
     });
-  } */}
+  }
 
   return (
     <>
@@ -88,9 +88,7 @@ const SignUpForm = () => {
         </CardHeader>
 
         <Form {...form}>
-          <form 
-          //</Form>onSubmit={//form.handleSubmit(onSubmit) }
-          className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <CardContent className="grid w-full gap-6">
               <FormField
                 control={form.control}

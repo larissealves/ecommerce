@@ -98,12 +98,14 @@ export const productVariantTable = pgTable("product_variant", {
     .notNull()
     .references(() => productTable.id),
   priceInCents: integer("price_in_cents").notNull(),
+  //NOTE:
   //R$ 10,00 --> save with: 1000
   //conversion: 1000/100 => 10
   createdAt: timestamp("created_at").notNull().defaultNow(),
   slug: text().notNull().unique(),
   name: text().notNull(),
   imageUrl: text("image_url").notNull(),
+  //NOTE:
   // salvar imagem em serviço de armazenamento de imagens estáticas,
   // pega o url e salva no BD interno.
   color: text().notNull(),
